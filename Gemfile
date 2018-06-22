@@ -41,6 +41,8 @@ gem 'hamlit-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # rspec-rails is a testing framework for Rails 3.x, 4.x and 5.0.
+  gem 'rspec-rails', '~> 3.7'
 end
 
 group :development do
