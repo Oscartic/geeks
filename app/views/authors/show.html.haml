@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @author.first_name
+%p
+  %b Last name:
+  = @author.last_name
+%p
+  %b Email:
+  = @author.email
+%p
+  %b Year:
+  = @author.year
+%p
+  %b Available:
+  = @author.available
+%p
+  %b Section:
+  = @author.section
+%p
+  %b Shelf:
+  = @author.shelf
+%p
+  %b Order:
+  = @author.order
+
+= link_to 'Edit', edit_author_path(@author)
+\|
+= link_to 'Back', authors_path
