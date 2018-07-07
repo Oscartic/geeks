@@ -32,4 +32,6 @@
 
 %br
 
-= link_to 'New Book', new_book_path
+-#Link para crear un nuevo libro perteneciente a un autor:
+= link_to 'New Book', new_author_book_path(params[:author_id])
+

@@ -1,4 +1,5 @@
-= form_for @book do |f|
+-#Para especificar el uso de dos recursos anidados se debe agregar entre corchetes despues del form_for
+= form_for [@author, @book] do |f|
   - if @book.errors.any?
     #error_explanation
       %h2= "#{pluralize(@book.errors.count, "error")} prohibited this book from being saved:"

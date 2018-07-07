@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    @books = Book.where(author_id: params[:author_id])
   end
 
   # GET /books/1
@@ -14,6 +14,8 @@ class BooksController < ApplicationController
 
   # GET /books/new
   def new
+    # Al tratarse de un recurso anidado, primero se requiere acceder a los autores:
+    @author = Author.find(params[:author_id])
     @book = Book.new
   end
 
@@ -25,7 +27,7 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new(book_params)
-
+    @book.author_id = params[:author_id]
     respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
