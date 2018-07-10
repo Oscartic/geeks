@@ -34,6 +34,10 @@ class Book < ApplicationRecord
     price * (100 + BOOK_VAT) / 100
   end
 
+  def reviews_count
+    reviews.count
+  end
+
   private
     def new_data?
       created_at.nil? || created_at > Date.new(2017, 11, 22)
