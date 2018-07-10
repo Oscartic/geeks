@@ -23,6 +23,17 @@ class Book < ApplicationRecord
   # y ahora la consulta se debe hacer asi: Book.last.author_first_name
   delegate :created_at, to: :author, prefix: true
 
+  attr_accessor :price
+
+  BOOK_VAT = 4
+  # metodo para calcular el IVA
+  def price_with_vat
+    # si el valor es nil, devolvera igualmente nil:
+    return nil if price.nil?
+    # de lo contrario, se aplica formula de IVA:
+    price * (100 + BOOK_VAT) / 100
+  end
+
   private
     def new_data?
       created_at.nil? || created_at > Date.new(2017, 11, 22)

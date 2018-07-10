@@ -18,4 +18,24 @@ RSpec.describe Book, type: :model do
   it "Should require author on old record book" do
     expect(FactoryBot.build(:book, created_at: Date.new(2016,1,1), author_id: nil)).to be_valid
   end
+
+  # Probando los metodos de clase
+  describe "price_with_vat" do
+    # probar que se esta aplicando el IVA (constante BOOK_VAT en clase Book.rb)
+    it "should apply BOOK_VAT" do
+      # para desacoplar la prueba de lo que se define en el metodo, se stubea la variable BOOK_VAT
+      # y se le asigna un valor, con ello se puede hacer el test verificando que se realiza correctamente
+      # la operacion, independiente del valor de la constante en el modelo:
+      stub_const("Book::BOOK_VAT", 5)
+      expect(Book.new(price: 100).price_with_vat).to eq(105)
+    end
+    # probar si el precio es 0, debe devolver 0
+    it "Should retun 0 with price 0" do
+      expect(Book.new(price: 0).price_with_vat).to eq(0)
+    end
+    # probar si el precio es nil
+    it "Should retun nil with price nil" do
+      expect(Book.new.price_with_vat).to eq(nil)
+    end
+  end
 end
