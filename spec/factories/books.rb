@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :book do
     title "MyString"
-    author nil
+    author { FactoryBot.create(:author) }
     description "MyString"
-    year 1
+    year { (2000..2018).to_a.sample }
     available false
     section "MyString"
     shelf 1

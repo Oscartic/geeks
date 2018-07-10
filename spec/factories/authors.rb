@@ -1,9 +1,10 @@
+require 'ffaker'
 FactoryBot.define do
   factory :author do
-    first_name "MyString"
-    last_name "MyString"
-    email "MyString"
-    year 1
+    first_name {FFaker::Name.first_name}
+    last_name {FFaker::Name.last_name}
+    email {FFaker::Internet.email}
+    year 2008
     available false
     section "MyString"
     shelf 1
