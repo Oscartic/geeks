@@ -8,6 +8,21 @@ class Book < ApplicationRecord
   # Para validar los nuevos registros se verifica con un condicional
   validates :author, presence: { if: :new_data? }
 
+  # Scopes
+  # libros que no tengan el titulo vacio:
+  scope :with_title, -> { where.not(title: nil) }
+  # Para obtener los mas resientes de determinada fecha
+  scope :newer_than, -> (year) { where('year >= ?', year)}
+
+  # Delegate
+  # Con esto le indicamos a la clase Book que pueda acceder a propiedades de la clase padre Author:
+  # delegate :first_name, to: :author
+  # con lo anterior se puede ejecutar por ejemplo: Book.last.first_name y traera el nombre del autor
+  # Si se desea trabajar con el prejifo de clase entonces serà:
+  delegate :first_name, to: :author, prefix: true
+  # y ahora la consulta se debe hacer asi: Book.last.author_first_name
+  delegate :created_at, to: :author, prefix: true
+
   private
     def new_data?
       created_at.nil? || created_at > Date.new(2017, 11, 22)
