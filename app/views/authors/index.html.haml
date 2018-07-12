@@ -1,3 +1,5 @@
+- content_for :title do
+  Autores
 %h1 Listing authors
 
 %table
@@ -33,3 +35,5 @@
 %br
 
 = link_to 'New Author', new_author_path
+- content_for :pre_search do
+  %p Tip: Search by Author's name
