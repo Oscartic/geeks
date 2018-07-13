@@ -7,7 +7,6 @@
           %li= msg
   -%i(first_name last_name email year available section shelf order).each do |field|
     .field
-      = f.label field
-      = f.text_field field
+      = render 'common/field_text', f: f, field: field
   .actions
     = f.submit 'Save'

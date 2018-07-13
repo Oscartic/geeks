@@ -7,24 +7,20 @@
         - @book.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :title
-    = f.text_field :title
+  = render 'common/field_text', f: f, field: :title
+  = render 'common/field_text', f: f, field: :description
+
   .field
     = f.label :author
     = f.collection_select :author_id, Author.all, :id, :last_name, include_blank: true
-  .field
-    = f.label :description
-    = f.text_field :description
+
   .field
     = f.label :year
     = f.number_field :year
   .field
     = f.label :available
     = f.check_box :available
-  .field
-    = f.label :section
-    = f.text_field :section
+  = render 'common/field_text', f: f, field: :section
   .field
     = f.label :shelf
     = f.number_field :shelf
