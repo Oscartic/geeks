@@ -5,30 +5,9 @@
       %ul
         - @author.errors.full_messages.each do |msg|
           %li= msg
-
-  .field
-    = f.label :first_name
-    = f.text_field :first_name
-  .field
-    = f.label :last_name
-    = f.text_field :last_name
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :year
-    = f.number_field :year
-  .field
-    = f.label :available
-    = f.check_box :available
-  .field
-    = f.label :section
-    = f.text_field :section
-  .field
-    = f.label :shelf
-    = f.number_field :shelf
-  .field
-    = f.label :order
-    = f.number_field :order
+  -%i(first_name last_name email year available section shelf order).each do |field|
+    .field
+      = f.label field
+      = f.text_field field
   .actions
     = f.submit 'Save'
