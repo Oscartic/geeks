@@ -25,3 +25,9 @@
       -#muestra el locale detectado y la hora con el formato I18n
       locale: #{I18n.locale}
       = I18n.localize Time.current, format: :long
+      %hr
+      = I18n.l Time.current, format: :short
+    #strong Mostrar consola para Debuggear:
+    -#Solo mostrara la consola en el ambiente de development:
+    - console if Rails.env.development?
+
