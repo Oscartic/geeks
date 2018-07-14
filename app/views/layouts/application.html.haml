@@ -21,3 +21,7 @@
         = text_field_tag :text_to_search
         = submit_tag 'Search'
     = yield
+    %p
+      -#muestra el locale detectado y la hora con el formato I18n
+      locale: #{I18n.locale}
+      = I18n.localize Time.current, format: :long
