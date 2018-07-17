@@ -45,7 +45,7 @@ RSpec.describe AuthorsController, type: :controller do
     it "returns a success response" do
       author = Author.create! valid_attributes
       get :index, params: {}, session: valid_session
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   end
 
@@ -53,14 +53,14 @@ RSpec.describe AuthorsController, type: :controller do
     it "returns a success response" do
       author = Author.create! valid_attributes
       get :show, params: {id: author.to_param}, session: valid_session
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   end
 
   describe "GET #new" do
     it "returns a success response" do
       get :new, params: {}, session: valid_session
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   end
 
@@ -68,7 +68,7 @@ RSpec.describe AuthorsController, type: :controller do
     it "returns a success response" do
       author = Author.create! valid_attributes
       get :edit, params: {id: author.to_param}, session: valid_session
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   end
 
@@ -89,7 +89,7 @@ RSpec.describe AuthorsController, type: :controller do
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
         post :create, params: {author: invalid_attributes}, session: valid_session
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
   end
@@ -118,7 +118,7 @@ RSpec.describe AuthorsController, type: :controller do
       it "returns a success response (i.e. to display the 'edit' template)" do
         author = Author.create! valid_attributes
         put :update, params: {id: author.to_param, author: invalid_attributes}, session: valid_session
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
   end
@@ -138,4 +138,20 @@ RSpec.describe AuthorsController, type: :controller do
     end
   end
 
+  describe 'redirect authors' do
+    let(:old_author) {'5'}
+    let(:new_author) {3}
+    before { stub_const('Author::REDIRECTED_AUTHORS', { old_author => new_author}) }
+    it 'Should redirect a request to the old to a request to the new' do
+      get :show, params: { id: old_author }
+      expect(response).to redirect_to(author_path(new_author))
+    end
+  end
+
+  describe 'with a nonexisting id' do
+    it 'Should return not_found status' do
+      get :show, params: { id: 3455553445345 }
+      expect(response.status).to eq(404)
+    end
+  end
 end
