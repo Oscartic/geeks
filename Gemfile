@@ -68,6 +68,7 @@ group :test do
   gem 'chromedriver-helper'
   # Collection of testing matchers extracted from Shoulda http://matchers.shoulda.io
   gem 'shoulda-matchers', '~> 3.1'
+  # Acceptance test framework for web applications
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
