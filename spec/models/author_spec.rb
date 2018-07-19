@@ -13,4 +13,13 @@ RSpec.describe Author, type: :model do
 
   # prueba realizada con gema Shoulda::Matchers
   it {is_expected.to validate_presence_of(:first_name) }
+
+  # Ejemplo de pruba para el before_save en modelo Author
+  context 'with an all-upcase last_name and all lowercase first_name' do
+    let(:author) {FactoryBot.build(:author, first_name: 'John', last_name: 'SMITH')}
+    it 'Should be titleized after save' do
+      author.save
+      expect(author.reload.to_s).to eq('John Smith')
+    end
+  end
 end
