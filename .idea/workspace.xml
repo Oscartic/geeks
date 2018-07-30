@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="63e0de65-d9d6-4b55-b223-6d7e50212d63" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -38,8 +39,27 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="20180730185321_create_employees.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="20180730185321_create_employees.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20180730185321_create_employees.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="8" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20180730191230_add_publishing_to_book.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20180730191230_add_publishing_to_book.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="20180730192253_remove_editorial_from_books.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20180730192253_remove_editorial_from_books.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="20180730193222_convert_isbn_to_integer.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20180730193222_convert_isbn_to_integer.rb">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -89,6 +109,8 @@
         <option value="$PROJECT_DIR$/app/decorators/author_decorator.rb" />
         <option value="$PROJECT_DIR$/app/models/author.rb" />
         <option value="$PROJECT_DIR$/spec/models/author_spec.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180730185321_create_employees.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180730191230_add_publishing_to_book.rb" />
       </list>
     </option>
   </component>
@@ -105,7 +127,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1293" />
+    <option name="width" value="1318" />
     <option name="height" value="983" />
   </component>
   <component name="ProjectView">
@@ -340,12 +362,12 @@
       <workItem from="1532353934634" duration="516000" />
       <workItem from="1532471563034" duration="996000" />
       <workItem from="1532560483754" duration="614000" />
-      <workItem from="1532972484661" duration="597000" />
+      <workItem from="1532972484661" duration="1854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78289000" />
+    <option name="totallyTimeSpent" value="79546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1293" height="983" extended-state="0" />
@@ -384,19 +406,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/credentials.yml.enc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/secrets.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.5.1/gems/spring-2.0.2/lib/spring/binstub.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -703,6 +712,19 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180730185321_create_employees.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180730191230_add_publishing_to_book.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180730192253_remove_editorial_from_books.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180730193222_convert_isbn_to_integer.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
