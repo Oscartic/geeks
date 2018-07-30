@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="63e0de65-d9d6-4b55-b223-6d7e50212d63" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -60,7 +59,11 @@
       </file>
       <file leaf-file-name="20180730193222_convert_isbn_to_integer.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20180730193222_convert_isbn_to_integer.rb">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="10" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -111,6 +114,7 @@
         <option value="$PROJECT_DIR$/spec/models/author_spec.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180730185321_create_employees.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180730191230_add_publishing_to_book.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180730193222_convert_isbn_to_integer.rb" />
       </list>
     </option>
   </component>
@@ -229,6 +233,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
@@ -362,18 +367,17 @@
       <workItem from="1532353934634" duration="516000" />
       <workItem from="1532471563034" duration="996000" />
       <workItem from="1532560483754" duration="614000" />
-      <workItem from="1532972484661" duration="1854000" />
+      <workItem from="1532972484661" duration="2634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79546000" />
+    <option name="totallyTimeSpent" value="80326000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1293" height="983" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1318" height="983" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49819493" visible="true" weight="0.38051045" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49819493" visible="true" weight="0.37329286" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -382,7 +386,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" sideWeight="0.50180507" side_tool="true" weight="0.3004695" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.42794278" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.42794278" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -725,7 +729,11 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180730193222_convert_isbn_to_integer.rb">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
