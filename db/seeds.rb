@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+authors = FactoryBot.create_list(:author, Random.rand(3..10))
+authors.each {|author| FactoryBot.create_list(:book, Random.rand(0..6) * Random.rand(0..5), author: author)}
+puts "+++++> ------- Seed done. Authors #{Author.count}, Books: #{Book.count}"
