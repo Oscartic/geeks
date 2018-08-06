@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
 
     def set_locale
       I18n.locale = params[:locale] if params[:locale]
+      @country = Country.find_by!(Code: I18n.locale)
     end
     # definimos el 404 que se esta pasando en el rescue_from
     def render_404
